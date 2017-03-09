@@ -1,0 +1,103 @@
+body,
+html {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #eeeef2;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+#content {
+  height: 100%;
+}
+#content #navbar {
+  background-color: #3f87c2;
+  width: 100%;
+  height: 60px;
+}
+#content #navbar #lightning {
+  width: 60px;
+  height: 60px;
+  background-color: #3974a6;
+  display: inline-flex;
+  align-items: center;
+}
+#content #navbar #lightning .logo {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+#content #navbar #selectbox {
+  margin-left: 10px;
+}
+#content #page {
+  display: flex;
+  height: 100%;
+}
+#content #page #leftNavbar {
+  width: 60px;
+  height: 100%;
+  background-color: #273038;
+  display: inline-block;
+}
+#content #page #mainContent {
+  display: inline-block;
+  width: calc(100% - 60px);
+}
+#content #page #mainContent #dashboard {
+  width: 100%;
+  display: inline-block;
+  background-color: #dde1ee;
+  height: 80px;
+  border-bottom: 1px solid #ccc;
+}
+#content #page #mainContent #dashboard #dashboardHeader {
+  margin-left: 20px;
+  font-family: 'Asap', sans-serif;
+  font-weight: 200;
+  color: #777;
+}
+#content #page #mainContent #grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+#content #page #mainContent #grid .gridItem {
+  display: flex;
+  width: 30%;
+  background-color: white;
+  display: block;
+  padding: 10px;
+  margin: 25px 0 0 25px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+#content #page #mainContent #grid .gridItem .fa {
+  color: #3f87c2;
+  font-size: 30px;
+  display: block;
+  margin: 0 auto;
+}
+#content #page #mainContent #grid .gridItem i {
+  display: block;
+}
+#content #page #mainContent #grid .gridItem h3 {
+  font-weight: 200;
+  font-family: 'Asap', sans-serif;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+#content #page #mainContent #grid .gridItem p {
+  font-family: 'Asap', sans-serif;
+  text-align: center;
+  display: block;
+  color: #dde1ee;
+  margin: 0 auto;
+}

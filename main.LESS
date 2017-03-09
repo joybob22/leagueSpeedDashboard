@@ -1,0 +1,120 @@
+@leaguespeedblue: #3f87c2;
+@deeperblue: #3974a6;
+@sidebarblue: #273038;
+@navhighlight: #181d22;
+@mainfont: 'Asap', sans-serif;
+@bodygray: #eeeef2;
+@subheadergray: #dde1ee;
+@lightgrayborder: #ccc;
+
+body, html {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  height: 100%;
+  background-color: @bodygray
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.mixin-margin(@margin: 10px) {
+  margin-left: @margin;
+}
+
+.mixin-grid() {
+  width: 30%;
+  background-color: white;
+  display: block;
+  padding: 10px;
+  margin: 25px 0 0 25px;
+  border: 1px solid @lightgrayborder;
+  text-align: center;
+  .fa {
+    color: @leaguespeedblue;
+    font-size: 30px;
+    display: block;
+    margin: 0 auto;
+  }
+  i {
+    display: block;
+  }
+  h3 {
+    font-weight: 200;
+    font-family: @mainfont;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+  p {
+    font-family: @mainfont;
+    text-align: center;
+    display: block;
+    color: @subheadergray;
+    margin: 0 auto;
+  }
+}
+
+
+#content {
+  height: 100%;
+  #navbar {
+    background-color: @leaguespeedblue;
+    width: 100%;
+    height: 60px;
+    #lightning {
+      width: 60px;
+      height: 60px;
+      background-color: @deeperblue;
+      display: inline-flex;
+      align-items: center;
+      .logo {
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+      }
+    }
+    #selectbox {
+      .mixin-margin(10px);
+    }
+  }
+  #page {
+    display: flex;
+    height: 100%;
+    #leftNavbar {
+      width: 60px;
+      height: 100%;
+      background-color: @sidebarblue;
+      display: inline-block;
+    }
+    #mainContent {
+      display: inline-block;
+      width: ~'calc(100% - 60px)';
+      #dashboard {
+        width: 100%;
+        display: inline-block;
+        background-color: @subheadergray;
+        height: 80px;
+        border-bottom: 1px solid @lightgrayborder;
+        #dashboardHeader {
+          .mixin-margin(20px);
+          font-family: @mainfont;
+          font-weight: 200;
+          color: #777;
+        }
+      }
+      #grid {
+        display: flex;
+        flex-wrap: wrap;
+        .gridItem {
+          display: flex;
+          .mixin-grid()
+        }
+      }
+    }
+  }
+}
