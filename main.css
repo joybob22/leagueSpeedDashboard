@@ -7,7 +7,8 @@ html {
   background-color: #eeeef2;
 }
 ul,
-li {
+li,
+select {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -34,8 +35,33 @@ li {
   width: 100%;
   display: inline-block;
 }
-#content #navbar #selectbox {
-  margin-left: 10px;
+#content #navbar #selectContainer {
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+}
+#content #navbar #selectContainer #selectbox {
+  margin-left: 25px;
+}
+#content #navbar #buttons {
+  float: right;
+  color: white;
+  font-family: 'Asap', sans-serif;
+  font-size: 15px;
+  margin-right: 40px;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+#content #navbar #buttons #inviteButton {
+  margin-right: 30px;
+}
+#content #navbar #buttons div {
+  display: inline-block;
+  padding: 7px 15px;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-right: 10px;
 }
 #content #page {
   display: flex;
@@ -46,6 +72,27 @@ li {
   height: 100%;
   background-color: #273038;
   display: inline-block;
+}
+#content #page #leftNavbar i {
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+#content #page #leftNavbar .parentItem {
+  width: 40px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+#content #page #leftNavbar .parentItem .selected {
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #181d22;
+  display: inline-flex;
+  align-items: center;
 }
 #content #page #mainContent {
   display: inline-block;
@@ -59,7 +106,7 @@ li {
   border-bottom: 1px solid #ccc;
 }
 #content #page #mainContent #dashboard #dashboardHeader {
-  margin-left: 20px;
+  margin-left: 25px;
   font-family: 'Asap', sans-serif;
   font-weight: 200;
   color: #777;
@@ -73,7 +120,7 @@ li {
   width: 30%;
   background-color: white;
   display: block;
-  padding: 10px;
+  padding: 15px 0;
   margin: 25px 0 0 25px;
   border: 1px solid #ccc;
   text-align: center;
@@ -93,6 +140,7 @@ li {
   text-align: center;
   display: block;
   margin: 0 auto;
+  margin-top: 25px;
 }
 #content #page #mainContent #grid .gridItem p {
   font-family: 'Asap', sans-serif;

@@ -14,7 +14,7 @@ body, html {
   height: 100%;
   background-color: @bodygray
 }
-ul, li {
+ul, li, select {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -28,7 +28,7 @@ ul, li {
   width: 30%;
   background-color: white;
   display: block;
-  padding: 10px;
+  padding: 15px 0;
   margin: 25px 0 0 25px;
   border: 1px solid @lightgrayborder;
   text-align: center;
@@ -47,6 +47,7 @@ ul, li {
     text-align: center;
     display: block;
     margin: 0 auto;
+    margin-top: 25px;
   }
   p {
     font-family: @mainfont;
@@ -78,8 +79,34 @@ ul, li {
         display: inline-block;
       }
     }
-    #selectbox {
-      .mixin-margin(10px);
+    #selectContainer {
+      height: 100%;
+      display: inline-flex;
+      align-items: center;
+      #selectbox {
+        .mixin-margin(25px);
+      }
+    }
+
+    #buttons {
+      float: right;
+      color: white;
+      font-family: @mainfont;
+      font-size: 15px;
+      margin-right: 40px;
+      display: inline-flex;
+      align-items: center;
+      height: 100%;
+      #inviteButton {
+        margin-right: 30px;
+      }
+      div {
+        display: inline-block;
+        padding: 7px 15px;
+        border: 1px solid white;
+        border-radius: 20px;
+        margin-right: 10px;
+      }
     }
   }
   #page {
@@ -90,6 +117,29 @@ ul, li {
       height: 100%;
       background-color: @sidebarblue;
       display: inline-block;
+      i {
+        color: white;
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+      }
+      .parentItem {
+        width: 40px;
+        margin: 0 auto;
+        margin-top: 20px;
+        .selected {
+          margin: 0 auto;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: @navhighlight;
+          display: inline-flex;
+          align-items: center;
+        }
+      }
+
+
     }
     #mainContent {
       display: inline-block;
@@ -101,7 +151,7 @@ ul, li {
         height: 80px;
         border-bottom: 1px solid @lightgrayborder;
         #dashboardHeader {
-          .mixin-margin(20px);
+          .mixin-margin(25px);
           font-family: @mainfont;
           font-weight: 200;
           color: #777;
